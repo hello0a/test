@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- css 코드 불러오기 -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/review.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/mypage_user/css/review.css">
     <title>마이페이지_회원용_후기관리</title>
 </head>
 <body>
@@ -16,12 +16,12 @@
     <main>
     	<div class="inner">
             <section class="left">
-                <jsp:include page="/jsp/main.jsp"/>
+                <jsp:include page="/main.jsp"/>
             </section>
             <section class="right">
                 <div class="review-container">
                     <div class="review-card">
-                        <img src="${pageContext.request.contextPath}/img/장원영.jpeg" alt="후기 사진">
+                        <img src="${pageContext.request.contextPath}/mypage_user/img/장원영.jpeg" alt="후기 사진">
                         <div class="card-body">
                             <h5 class="card-title">매장명</h5>
                             <textarea class="card-text">고객 후기</textarea>
@@ -29,7 +29,7 @@
                         </div>
                     </div>
                     <div class="review-card">
-                        <img src="${pageContext.request.contextPath}/img/장원영.jpeg" alt="후기 사진">
+                        <img src="${pageContext.request.contextPath}/mypage_user/img/장원영.jpeg" alt="후기 사진">
                         <div class="card-body">
                             <h5 class="card-title">매장명</h5>
                             <textarea class="card-text">고객 후기</textarea>
@@ -37,7 +37,7 @@
                         </div>
                     </div>
                     <div class="review-card">
-                        <img src="${pageContext.request.contextPath}/img/장원영.jpeg" alt="후기 사진">
+                        <img src="${pageContext.request.contextPath}/mypage_user/img/장원영.jpeg" alt="후기 사진">
                         <div class="card-body">
                             <h5 class="card-title">매장명</h5>
                             <textarea class="card-text">고객 후기</textarea>
