@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- css 코드 불러오기 -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/info.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/mypage_user/css/info.css">
     <title>마이페이지_회원용_회원정보</title>
 </head>
 <body>
@@ -16,7 +16,7 @@
     <main>
     	<div class="inner">
             <section class="left">
-                <jsp:include page="/jsp/main.jsp"/>
+                <jsp:include page="/mypage_user/main.jsp"/>
             </section>
             <section class="right">
                 <div class="info">
