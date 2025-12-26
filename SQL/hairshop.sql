@@ -1,0 +1,108 @@
+-- 데이터베이스 생성
+CREATE DATABASE hairshop;
+-- 리뷰 테이블 생성
+CREATE TABLE `review` (
+	`no`			INT	NOT NULL	COMMENT 'PK',
+	`reserved_no`	INT	NOT NULL	COMMENT '예약번호 UK,FK',
+	`designer_no`	INT	NOT NULL	COMMENT '디자이너 FK',
+	`content`	TEXT	NOT NULL	COMMENT '리뷰 내용',
+	`created_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP	COMMENT '등록일자',
+	`updated_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP	COMMENT '등록일자'
+);
+-- 회원 테이블 생성
+CREATE TABLE `user` (
+	`no`	INT	NOT NULL	COMMENT 'PK',
+	`name`	VARCHAR(100)	NOT NULL	COMMENT '아이디',
+	`password`	VARCHAR(100)	NOT NULL	COMMENT '비밀번호',
+	`email`	VARCHAR(100)	NOT NULL	COMMENT '이메일',
+	`full_name`	VARCHAR(100)	NOT NULL	COMMENT '이름',
+	`birth`	DATETIME	NOT NULL	COMMENT '생년월일',
+	`gender`	BOOLEAN	NOT NULL	COMMENT '성별',
+	`nationality`	BOOLEAN	NOT NULL	COMMENT '국적',
+	`phonenumber`	INT	NOT NULL	COMMENT '전화번호',
+	`created_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP	COMMENT '등록일자',
+	`updated_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP	COMMENT '수정 일자'
+);
+
+
+-- 예약 테이블 생성
+CREATE TABLE `reserved` (
+	`no`	INT	NOT NULL	COMMENT 'PK',
+	`user_no`	INT	NOT NULL	COMMENT '회원FK',
+	`designer_no`	INT	NOT NULL	COMMENT '디자이너 FK',
+	`style_no`	INT	NOT NULL	COMMENT '스타일 FK',
+	`date`	TIMESTAMP	NOT NULL	COMMENT '예약 날짜',
+	`time`	TIMESTAMP	NOT NULL	COMMENT '예약시간',
+	`etc`	TEXT	NULL	COMMENT '특이 사항',
+	`phonenumber`	INT	NOT NULL	COMMENT '전화번호',
+	`price`	INT	NOT NULL	COMMENT '시술 가격',
+	`created_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP	COMMENT '등록일자',
+	`updated_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP	COMMENT '수정일자'
+);
+-- 헤어디자이너 테이블 생성
+CREATE TABLE `designer` (
+	`no`	INT	NOT NULL	COMMENT 'PK',
+	`name`	VARCHAR(100)	NOT NULL	COMMENT '아이디',
+	`password`	VARCHAR(100)	NOT NULL	COMMENT '비밀번호',
+	`email`	VARCHAR(100)	NOT NULL	COMMENT '이메일',
+	`full_name`	VARCHAR(100)	NOT NULL	COMMENT '미용실 이름',
+	`birth`	TIMESTAMP	NOT NULL	COMMENT '생년월일',
+	`gender`	BOOLEAN	NOT NULL	COMMENT '성별',
+	`nationality`	BOOLEAN	NOT NULL	COMMENT '국적',
+	`number`	INT	NOT NULL	COMMENT '번호',
+	`shop_name`	BOOLEAN	NOT NULL	COMMENT '매장명',
+	`location`	VARCHAR(200)	NOT NULL	COMMENT '위치',
+	`created_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP	COMMENT '등록 일자',
+	`updated_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP	COMMENT '수정일자'
+);
+-- 헤어 시술 테이블 생성
+CREATE TABLE `style` (
+	`no`	INT	NOT NULL	COMMENT 'PK',
+	`name`	VARCHAR(100)	NOT NULL	COMMENT '시술 이름',
+	`price`	INT	NOT NULL	COMMENT '시술 가격',
+	`created_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP	COMMENT '등록 일자'
+);
+-- 문의게시판 테이블 생성
+CREATE TABLE `board` (
+	`no`	INT	NOT NULL	COMMENT 'PK',
+	`user_no`	INT	NOT NULL	COMMENT '작성자  FK',
+	`designer_no`	INT	NOT NULL	COMMENT '매장명FK',
+	`title`	VARCHAR(100)	NOT NULL	COMMENT '제목',
+	`content`	TEXT	NOT NULL	COMMENT '내용',
+	`created_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP	COMMENT '등록일자',
+	`updated_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP	COMMENT '수정일자'
+);
+
+ALTER TABLE `review` ADD CONSTRAINT `PK_REVIEW` PRIMARY KEY (
+	`no`,
+	`reserved_no`
+);
+
+ALTER TABLE `user` ADD CONSTRAINT `PK_USER` PRIMARY KEY (
+	`no`
+);
+
+ALTER TABLE `reserved` ADD CONSTRAINT `PK_RESERVED` PRIMARY KEY (
+	`no`
+);
+
+ALTER TABLE `designer` ADD CONSTRAINT `PK_DESIGNER` PRIMARY KEY (
+	`no`
+);
+
+ALTER TABLE `style` ADD CONSTRAINT `PK_STYLE` PRIMARY KEY (
+	`no`
+);
+
+ALTER TABLE `board` ADD CONSTRAINT `PK_BOARD` PRIMARY KEY (
+	`no`
+);
+
+ALTER TABLE `review` ADD CONSTRAINT `FK_reserved_TO_review_1` FOREIGN KEY (
+	`reserved_no`
+)
+REFERENCES `reserved` (
+	`no`
+);user
+
+
