@@ -20,7 +20,7 @@
 	<header>
 		<jsp:include page="${pageContext.request.contextPath}/layout/header.jsp" />
 	</header>
-	<main>
+	<main class=designer-profile-main>
 		<div class="inner">
 			<section class="left">
 				<jsp:include page="${pageContext.request.contextPath}/mypage_designer/side-left.jsp" />
@@ -28,42 +28,42 @@
 			<section class="right">
 				<div class="designer-profile">
 					<img src="${pageContext.request.contextPath}/mypage_designer/img/dug.jpg" alt="디자이너 프로필 사진">
-					<p>디자이너이름</p>
+					<p>매장명</p>
 				</div>
-				<div class="info">
-					<div class="label-wrap">
-						<label class="id">아이디</label> 
-						<label class="pw">비밀번호</label> 
-						<label class="name">이름</label> 
-						<label class="birth">생년월일</label> 
-						<label class="email">이메일</label> 
-						<label class="phone">전화번호</label> 
-						<label class="shopname">매장명</label> 
-						<label class="sex">성별</label>
-						<label class="sex">국적</label>
-						<label class="sex">사업자번호</label>
-						<label class="sex">위치</label>
-					</div>
-
-					<div class="p-wrap">
-						<p>${designer.id }</p>
-						<p>${designer.password }</p>
-						<p>${designer.full_name }</p>
-						<p>${designer.birth }</p>
-						<p>${designer.email }</p>
-						<p>${designer.phonenumber }</p>
-						<p>${designer.shop_name }</p>
-						<p>${designer.gender }</p>
-						<p>${designer.nationality }</p>
-						<p>${designer.biz_num }</p>
-						<div>
-							<p>${designer.city }</p>
-							<p>${designer.district }</p>
-							<p>${designer.addr_detail }</p>
+				<div class="designer-area">
+					<div class="designer-info">
+						<div class="label-wrap">
+							<label class="id">아이디</label> 
+							<label class="pw">비밀번호</label> 
+							<label class="name">이름</label> 
+							<label class="birth">생년월일</label> 
+							<label class="email">이메일</label> 
+							<label class="phone">전화번호</label> 
+							<label class="shopname">매장명</label> 
+							<label class="sex">성별</label>
+							<label class="sex">국적</label>
+							<label class="sex">사업자번호</label>
+							<label class="sex">위치</label>
+						</div>
+	
+						<div class="p-wrap">
+							<p>${designer.id }</p>
+							<p>${designer.password }</p>
+							<p>${designer.full_name }</p>
+							<p>${designer.birth }</p>
+							<p>${designer.email }</p>
+							<p>${designer.phonenumber }</p>
+							<p>${designer.shop_name }</p>
+							<p>${designer.gender }</p>
+							<p>${designer.nationality }</p>
+							<p>${designer.biz_num }</p>
+							<div>
+								<p>${designer.city} ${designer.district} ${designer.addr_detail }</p>
+							</div>
 						</div>
 					</div>
+				<a class="designer-profile-edit" href="/designer/profile/edit?id=${designer.id}">회원정보 수정</a>
 				</div>
-				<a class="edit" href="/designer/profile/edit?id=${designer.id}">회원정보 수정</a>
 			</section>
 
 		</div>

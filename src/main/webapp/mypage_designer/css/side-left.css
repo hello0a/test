@@ -114,6 +114,12 @@ flex: none;
 order: 0;
 align-self: stretch;
 flex-grow: 0;
+
+}
+
+.mypage-index a {
+	
+    padding-left: 0.5rem;
 }
 
 .list {
@@ -132,6 +138,8 @@ background: gainsboro;
 flex: none;
 order: 1;
 flex-grow: 0;
+
 }
+
 
 

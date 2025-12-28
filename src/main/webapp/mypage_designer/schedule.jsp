@@ -25,7 +25,6 @@
 			<section class="right">
 				<div class="page-button">
 				<div class="button-list">
-					    <!-- 아이콘 / 버튼 / 텍스트 아무거나 올 수 있음 -->
 				    <button class="button-btn">버튼1</button>
 				    <button class="button-btn">버튼2</button>
 				  </div>

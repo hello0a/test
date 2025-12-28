@@ -26,7 +26,7 @@
 				<jsp:include page="${pageContext.request.contextPath}/mypage_designer/side-left.jsp" />
 			</section>
 			<section class="right">
-				<p>예약 관리</p>
+				<h1>예약 관리</h1>
 				<div class="table-row-base">
 				  <!-- 헤더(컬럼명) -->
 				  <div class="table-row table-row--head">

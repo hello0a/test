@@ -21,9 +21,11 @@
 		<jsp:include page="${pageContext.request.contextPath}/layout/header.jsp" />
 	</header>
 	
-	<section class="mypage-main">
-		<jsp:include page="${pageContext.request.contextPath}/mypage_user/mypage_menu.jsp" />
-	</section>
+	<main>
+		<section class="mypage-main">
+			<jsp:include page="${pageContext.request.contextPath}/mypage_user/mypage_menu.jsp" />
+		</section>
+	</main>
 		
 	<%-- <section class="mypage-main">
 

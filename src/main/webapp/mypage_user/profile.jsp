@@ -12,7 +12,8 @@
 	<!-- css 코드 불러오기 -->
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/layout/common.css">
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/mypage_user/css/main.css">
-	<link rel="stylesheet" href="${pageContext.request.contextPath}/mypage_user/css/profile.css">
+<%-- 	<link rel="stylesheet" href="${pageContext.request.contextPath}/mypage_user/css/mypage_menu.css">
+ --%>	<link rel="stylesheet" href="${pageContext.request.contextPath}/mypage_user/css/profile.css">
 	<title>마이페이지_회원용_회원정보</title>
 </head>
 
@@ -20,9 +21,8 @@
 	<header>
 		<jsp:include page="${pageContext.request.contextPath}/layout/header.jsp" />
 	</header>
-	<main>
-		<div class="inner">
-			<section class="left">
+	<main class="user-profile-main">
+			<section class="left mypage-main">
 				<jsp:include page="/mypage_user/mypage_menu.jsp" />
 			</section>
 			<section class="right">
@@ -38,23 +38,30 @@
 					</div>
 
 					<div class="p-wrap">
-						<p>${user.id }</p>
+						<p>test01</p>
+						<p>12345</p>
+						<p>홍길동</p>
+						<p>2025-12-28</p>
+						<p>test01@test.com</p>
+						<p>010-1234-5678</p>
+						<p>M</p>
+					</div>
+
+<%-- 						<p>${user.id }</p>
 						<p>${user.password }</p>
 						<p>${user.full_name }</p>
 						<p>${user.birth }</p>
 						<p>${user.email }</p>
 						<p>${user.phonenumber }</p>
 						<p>${user.gender }</p>
-<!-- 						<div class="button-wrap">
+ --%><!-- 						<div class="button-wrap">
 							<button>남</button>
 							<button>여</button>
 						</div>
- -->					</div>
+ -->
 				</div>
 				<a class="edit" href="/user/mypage/profile_edit?id=${user.id}">회원정보 수정</a>
 			</section>
-
-		</div>
 	</main>
 	<footer>
 		<jsp:include page="${pageContext.request.contextPath}/layout/footer.jsp" />
