@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/layout/common.css">
     <header class="site-header">
         <div class="header-container">
             <!-- 로고 영역: 클릭 시 홈으로 이동 (임시로 index.jsp) -->

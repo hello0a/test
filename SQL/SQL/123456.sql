@@ -1,107 +1,107 @@
 
--- ë¦¬ë·° í…Œì´ë¸” ìƒì„±
+-- ¸®ºä Å×ÀÌºí »ý¼º
 drop table if exists review;
 CREATE TABLE `review` (
 	`no`			INT	AUTO_INCREMENT primary key	COMMENT 'PK',
-	`reserved_no`	INT	NOT NULL	COMMENT 'ì˜ˆì•½ë²ˆí˜¸ UK,FK',
-	`designer_no`	INT	NOT NULL	COMMENT 'ë””ìžì´ë„ˆ FK',
-	`content`	TEXT	NOT NULL	COMMENT 'ë¦¬ë·° ë‚´ìš©',
-	`created_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP	COMMENT 'ë“±ë¡ì¼ìž',
-	`updated_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP	COMMENT 'ë“±ë¡ì¼ìž'
+	`reserved_no`	INT	NOT NULL	COMMENT '¿¹¾à¹øÈ£ UK,FK',
+	`designer_no`	INT	NOT NULL	COMMENT 'µðÀÚÀÌ³Ê FK',
+	`content`	TEXT	NOT NULL	COMMENT '¸®ºä ³»¿ë',
+	`created_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP	COMMENT 'µî·ÏÀÏÀÚ',
+	`updated_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP	COMMENT 'µî·ÏÀÏÀÚ'
 );
 
 
--- íšŒì› í…Œì´ë¸” ìƒì„±
+-- È¸¿ø Å×ÀÌºí »ý¼º
 drop table if exists users;
 CREATE TABLE `users` (
 	`no`	 INT	AUTO_INCREMENT primary key	COMMENT 'PK',
-	`id`	VARCHAR(100)	NOT NULL	COMMENT 'ì•„ì´ë””',
-	`password`	VARCHAR(100)	NOT NULL	COMMENT 'ë¹„ë°€ë²ˆí˜¸',
-	`email`	VARCHAR(100)	NOT NULL	COMMENT 'ì´ë©”ì¼',
-	`full_name`	VARCHAR(100)	NOT NULL	COMMENT 'ì´ë¦„',
-	`birth`	DATETIME	NOT NULL	COMMENT 'ìƒë…„ì›”ì¼',
-	`gender`	VARCHAR(100)	NOT NULL	COMMENT 'ì„±ë³„',
-	`nationality`	VARCHAR(100)	NOT NULL	COMMENT 'êµ­ì ',
-	`phonenumber`	VARCHAR(100)	NOT NULL	COMMENT 'ì „í™”ë²ˆí˜¸',
-	`created_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP	COMMENT 'ë“±ë¡ì¼ìž',
-	`updated_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP	COMMENT 'ìˆ˜ì • ì¼ìž'
+	`id`	VARCHAR(100)	NOT NULL	COMMENT '¾ÆÀÌµð',
+	`password`	VARCHAR(100)	NOT NULL	COMMENT 'ºñ¹Ð¹øÈ£',
+	`email`	VARCHAR(100)	NOT NULL	COMMENT 'ÀÌ¸ÞÀÏ',
+	`full_name`	VARCHAR(100)	NOT NULL	COMMENT 'ÀÌ¸§',
+	`birth`	DATETIME	NOT NULL	COMMENT '»ý³â¿ùÀÏ',
+	`gender`	VARCHAR(100)	NOT NULL	COMMENT '¼ºº°',
+	`nationality`	VARCHAR(100)	NOT NULL	COMMENT '±¹Àû',
+	`phonenumber`	VARCHAR(100)	NOT NULL	COMMENT 'ÀüÈ­¹øÈ£',
+	`created_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP	COMMENT 'µî·ÏÀÏÀÚ',
+	`updated_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP	COMMENT '¼öÁ¤ ÀÏÀÚ'
 );
 
--- ì˜ˆì•½ í…Œì´ë¸” ìƒì„±
+-- ¿¹¾à Å×ÀÌºí »ý¼º
 drop table if exists reserved;
 CREATE TABLE `reserved` (
 	`no`	INT	AUTO_INCREMENT	 primary key COMMENT 'PK',
-	`user_no`	INT	NOT NULL	COMMENT 'íšŒì›FK',
-	`designer_no`	INT	NOT NULL	COMMENT 'ë””ìžì´ë„ˆ FK',
-	`style_no`	INT	NOT NULL	COMMENT 'ìŠ¤íƒ€ì¼ FK',
-	`date`	TIMESTAMP	NOT NULL	COMMENT 'ì˜ˆì•½ ë‚ ì§œ',
-	`time`	TIMESTAMP	NOT NULL	COMMENT 'ì˜ˆì•½ì‹œê°„',
-	`etc`	TEXT	NULL	COMMENT 'íŠ¹ì´ ì‚¬í•­',
-	`phonenumber`	INT	NOT NULL	COMMENT 'ì „í™”ë²ˆí˜¸',
-	`price`	INT	NOT NULL	COMMENT 'ì‹œìˆ  ê°€ê²©',
-	`created_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP	COMMENT 'ë“±ë¡ì¼ìž',
-	`updated_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP	COMMENT 'ìˆ˜ì •ì¼ìž'
+	`user_no`	INT	NOT NULL	COMMENT 'È¸¿øFK',
+	`designer_no`	INT	NOT NULL	COMMENT 'µðÀÚÀÌ³Ê FK',
+	`style_no`	INT	NOT NULL	COMMENT '½ºÅ¸ÀÏ FK',
+	`date`	TIMESTAMP	NOT NULL	COMMENT '¿¹¾à ³¯Â¥',
+	`time`	TIMESTAMP	NOT NULL	COMMENT '¿¹¾à½Ã°£',
+	`etc`	TEXT	NULL	COMMENT 'Æ¯ÀÌ »çÇ×',
+	`phonenumber`	INT	NOT NULL	COMMENT 'ÀüÈ­¹øÈ£',
+	`price`	INT	NOT NULL	COMMENT '½Ã¼ú °¡°Ý',
+	`created_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP	COMMENT 'µî·ÏÀÏÀÚ',
+	`updated_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP	COMMENT '¼öÁ¤ÀÏÀÚ'
 );
--- í—¤ì–´ë””ìžì´ë„ˆ í…Œì´ë¸” ìƒì„±
+-- Çì¾îµðÀÚÀÌ³Ê Å×ÀÌºí »ý¼º
 drop table if exists designer;
 CREATE TABLE `designer` (
 	`no`	INT	AUTO_INCREMENT primary key	COMMENT 'PK',
-	`name`	VARCHAR(100)	NOT NULL	COMMENT 'ì•„ì´ë””',
-	`password`	VARCHAR(100)	NOT NULL	COMMENT 'ë¹„ë°€ë²ˆí˜¸',
-	`email`	VARCHAR(100)	NOT NULL	COMMENT 'ì´ë©”ì¼',
-	`full_name`	VARCHAR(100)	NOT NULL	COMMENT 'ë¯¸ìš©ì‚¬ ì´ë¦„',
-	`birth`	TIMESTAMP	NOT NULL	COMMENT 'ìƒë…„ì›”ì¼',
-	`gender`	BOOLEAN	NOT NULL	COMMENT 'ì„±ë³„',
-	`nationality`	BOOLEAN	NOT NULL	COMMENT 'êµ­ì ',
-	`number`	INT	NOT NULL	COMMENT 'ë²ˆí˜¸',
-	`shop_name`	varchar(200)	NOT NULL	COMMENT 'ë§¤ìž¥ëª…',
-	`location`	VARCHAR(200)	NOT NULL	COMMENT 'ìœ„ì¹˜',
-	`created_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP	COMMENT 'ë“±ë¡ ì¼ìž',
-	`updated_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP	COMMENT 'ìˆ˜ì •ì¼ìž'
+	`name`	VARCHAR(100)	NOT NULL	COMMENT '¾ÆÀÌµð',
+	`password`	VARCHAR(100)	NOT NULL	COMMENT 'ºñ¹Ð¹øÈ£',
+	`email`	VARCHAR(100)	NOT NULL	COMMENT 'ÀÌ¸ÞÀÏ',
+	`full_name`	VARCHAR(100)	NOT NULL	COMMENT '¹Ì¿ë»ç ÀÌ¸§',
+	`birth`	TIMESTAMP	NOT NULL	COMMENT '»ý³â¿ùÀÏ',
+	`gender`	BOOLEAN	NOT NULL	COMMENT '¼ºº°',
+	`nationality`	BOOLEAN	NOT NULL	COMMENT '±¹Àû',
+	`number`	INT	NOT NULL	COMMENT '¹øÈ£',
+	`shop_name`	varchar(200)	NOT NULL	COMMENT '¸ÅÀå¸í',
+	`location`	VARCHAR(200)	NOT NULL	COMMENT 'À§Ä¡',
+	`created_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP	COMMENT 'µî·Ï ÀÏÀÚ',
+	`updated_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP	COMMENT '¼öÁ¤ÀÏÀÚ'
 );
--- í—¤ì–´ ì‹œìˆ  í…Œì´ë¸” ìƒì„±
+-- Çì¾î ½Ã¼ú Å×ÀÌºí »ý¼º
 drop table if exists style;
 CREATE TABLE `style` (
 	`no`	INT	AUTO_INCREMENT primary key COMMENT 'PK',
-	`name`	VARCHAR(100)	NOT NULL	COMMENT 'ì‹œìˆ  ì´ë¦„',
-	`price`	INT	NOT NULL	COMMENT 'ì‹œìˆ  ê°€ê²©',
-	`created_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP	COMMENT 'ë“±ë¡ ì¼ìž'
+	`name`	VARCHAR(100)	NOT NULL	COMMENT '½Ã¼ú ÀÌ¸§',
+	`price`	INT	NOT NULL	COMMENT '½Ã¼ú °¡°Ý',
+	`created_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP	COMMENT 'µî·Ï ÀÏÀÚ'
 );
--- ë¬¸ì˜ê²Œì‹œíŒ í…Œì´ë¸” ìƒì„±
+-- ¹®ÀÇ°Ô½ÃÆÇ Å×ÀÌºí »ý¼º
 drop table if exists board;
 CREATE TABLE `board` (
 	`no`	INT	AUTO_INCREMENT primary key COMMENT 'PK',
-	`user_no`	INT	NOT NULL	COMMENT 'ìž‘ì„±ìž  FK',
-	`designer_no`	INT	NOT NULL	COMMENT 'ë§¤ìž¥ëª…FK',
-	`title`	VARCHAR(100)	NOT NULL	COMMENT 'ì œëª©',
-	`content`	TEXT	NOT NULL	COMMENT 'ë‚´ìš©',
-	`created_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP	COMMENT 'ë“±ë¡ì¼ìž',
-	`updated_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP	COMMENT 'ìˆ˜ì •ì¼ìž'
+	`user_no`	INT	NOT NULL	COMMENT 'ÀÛ¼ºÀÚ  FK',
+	`designer_no`	INT	NOT NULL	COMMENT '¸ÅÀå¸íFK',
+	`title`	VARCHAR(100)	NOT NULL	COMMENT 'Á¦¸ñ',
+	`content`	TEXT	NOT NULL	COMMENT '³»¿ë',
+	`created_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP	COMMENT 'µî·ÏÀÏÀÚ',
+	`updated_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP	COMMENT '¼öÁ¤ÀÏÀÚ'
 );
 
 drop table if exists comment;
 CREATE TABLE `comment` (
 	`no`	INT	AUTO_INCREMENT primary key COMMENT 'PK',
-	`board_no` int not null UNIQUE comment 'ê²Œì‹œíŒ FK',
-	`designer_no`	INT	NOT NULL	COMMENT 'ìž‘ì„±ìž FK',
-	`content` TEXT not null comment 'ë‚´ìš©',
-	`created_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP	COMMENT 'ìž‘ì„±ì¼ìž',
-	`updated_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP	COMMENT 'ìˆ˜ì •ì¼ìž'
+	`board_no` int not null UNIQUE comment '°Ô½ÃÆÇ FK',
+	`designer_no`	INT	NOT NULL	COMMENT 'ÀÛ¼ºÀÚ FK',
+	`content` TEXT not null comment '³»¿ë',
+	`created_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP	COMMENT 'ÀÛ¼ºÀÏÀÚ',
+	`updated_at`	TIMESTAMP	NOT NULL	DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP	COMMENT '¼öÁ¤ÀÏÀÚ'
 );
 
 
 INSERT INTO designer (name, password, email, full_name, birth, gender, nationality, number, shop_name, location)
 VALUES 
-('designer1', '1234', 'designer1@test.com', 'í™ê¸¸ë™', '1990-01-01', 1, 1, 101, 'ê°•ë‚¨ì ', 'ì„œìš¸ ê°•ë‚¨êµ¬'),
-('designer2', '1234', 'designer2@test.com', 'ê¹€ì² ìˆ˜', '1992-05-01', 0, 1, 102, 'ì••êµ¬ì •ì ', 'ì„œìš¸ ê°•ë‚¨êµ¬');
+('designer1', '1234', 'designer1@test.com', 'È«±æµ¿', '1990-01-01', 1, 1, 101, '°­³²Á¡', '¼­¿ï °­³²±¸'),
+('designer2', '1234', 'designer2@test.com', '±èÃ¶¼ö', '1992-05-01', 0, 1, 102, '¾Ð±¸Á¤Á¡', '¼­¿ï °­³²±¸');
 
--- ìƒ˜í”Œ ê²Œì‹œê¸€ ë°ì´í„°
+-- »ùÇÃ °Ô½Ã±Û µ¥ÀÌÅÍ
 INSERT INTO board (user_no, designer_no, title, content)
-VALUES (1, 1, 'ì²« ë²ˆì§¸ ë¬¸ì˜ê¸€ìž…ë‹ˆë‹¤', 'ì˜ˆì•½ ê´€ë ¨ ë¬¸ì˜ë“œë¦½ë‹ˆë‹¤.'),
-       (1, 2, 'ë‘ ë²ˆì§¸ ë¬¸ì˜ê¸€ìž…ë‹ˆë‹¤', 'ì‹œìˆ  ê´€ë ¨ ë¬¸ì˜ë“œë¦½ë‹ˆë‹¤.');
+VALUES (1, 1, 'Ã¹ ¹øÂ° ¹®ÀÇ±ÛÀÔ´Ï´Ù', '¿¹¾à °ü·Ã ¹®ÀÇµå¸³´Ï´Ù.'),
+       (1, 2, 'µÎ ¹øÂ° ¹®ÀÇ±ÛÀÔ´Ï´Ù', '½Ã¼ú °ü·Ã ¹®ÀÇµå¸³´Ï´Ù.');
 
 INSERT INTO users (id, password, email, full_name, birth, gender, nationality, phonenumber)
-VALUES ('testuser', '1234', 'test@test.com', 'í…ŒìŠ¤íŠ¸ìœ ì €', '1999-01-01', 'M', 'KR', '01012341234');
+VALUES ('testuser', '1234', 'test@test.com', 'Å×½ºÆ®À¯Àú', '1999-01-01', 'M', 'KR', '01012341234');
 
 select * from designer;
 

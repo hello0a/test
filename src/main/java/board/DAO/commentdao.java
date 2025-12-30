@@ -4,7 +4,6 @@ import board.DTO.commentDTO;
 
 public class commentdao {
 
-    // 답변 조회 (이미 있음)
 	public commentDTO findByBoardNo(int boardNo) {
 
 	    commentDTO dto = null;
@@ -42,7 +41,6 @@ public class commentdao {
 	}
 
 
-    // ✅ 답변 등록
 	public void insert(commentDTO dto) {
 	    String sql = "INSERT INTO comment (board_no, designer_no, content) VALUES (?, ?, ?)";
 
@@ -61,7 +59,6 @@ public class commentdao {
 	}
 	
 
-	// 답변 삭제
 	public int delete(int no) {
 	    int result = 0;
 	    String sql = "DELETE FROM comment WHERE no = ?";

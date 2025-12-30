@@ -1,2 +1,5 @@
 eclipse.preferences.version=1
+encoding//src/main/java/board/DAO/JDBConnection.java=UTF-8
+encoding//src/main/java/board/DAO/boarddao.java=UTF-8
+encoding//src/main/java/board/DAO/commentdao.java=UTF-8
 encoding/<project>=x-windows-949

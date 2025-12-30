@@ -5,6 +5,10 @@ import java.sql.Timestamp;
 public class boardDTO {
     private int no;
     private String title;
+    
+    
+    
+    
     private String content;
     private String writer;
     private int designerNo;   

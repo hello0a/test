@@ -12,7 +12,8 @@
     </head>
 
     <body>
-  	 <jsp:include page="include/header.jsp" />
+ 	<jsp:include page="/layout/header.jsp" />
+
 
         <div class="review-container">
             <div class="header">
@@ -105,7 +106,7 @@
             }
             
         </script>
-        <jsp:include page="include/footer.jsp" />
-    </body>
+	<jsp:include page="/layout/footer.jsp" />
+	    </body>
 
     </html>
