@@ -113,7 +113,6 @@ public class boarddao {
         return false;
     }
 
-    // 寃뚯떆湲� �궘�젣
     public boolean delete(int no) {
         String sql = "DELETE FROM board WHERE no=?";
         JDBConnection db = new JDBConnection();
@@ -130,7 +129,6 @@ public class boarddao {
         return false;
     }
 
-    // �뱶濡��떎�슫�슜 �쟾泥� 留ㅼ옣 由ъ뒪�듃
     public List<boardDTO> getShopList() {
         List<boardDTO> shopList = new ArrayList<>();
         String sql = "SELECT no, shop_name FROM designer ORDER BY shop_name ASC";
