@@ -10,26 +10,30 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="${root}/layout/common.css">
 	<link rel="stylesheet" href="${root}/login/css/login.css">
 	<title>로그인</title>
 </head>
 
 <body>
+	<header>
+		<jsp:include page="/layout/header.jsp" />
+	</header>
 	<form action="${root}/designer/login" method="post">
 	<div class="login-wrap">
 		<div class="logo">
 			<span class="logo-icon">✂️</span>
 		</div>
 		<div class="login-container">
-			<h1>매장용 로그인</h1>
+			<h1>매장 로그인</h1>
 			<div class="input-box">
 				<label for="id">아이디</label> 
-				<input type="text" id="id" name="id" placeholder="아이디 입력" value="${user.id}">
+				<input type="text" id="id" name="id" placeholder="아이디 입력" value="${designer.id}">
 			</div>
 
 			<div class="input-box">
 				<label for="pw">비밀번호</label>
-				<input type="password" id="pw" name="pw" placeholder="비밀번호 입력" value="${user.pw}">
+				<input type="password" id="pw" name="pw" placeholder="비밀번호 입력" value="${designer.pw}">
 			</div>
 
 			<div class="save-id">
@@ -44,6 +48,9 @@
 		</div>
 	</div>
 	</form>
+	<footer>
+		<jsp:include page="/layout/footer.jsp" />
+	</footer>
 </body>
 
 </html>
