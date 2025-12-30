@@ -22,7 +22,7 @@
 				<jsp:include page="${pageContext.request.contextPath}/mypage_designer/side-left.jsp" />
 			</section>
 			<section class="right">
-				<div class="user-profile">
+				<div class="designer-profile">
 					<img src="${pageContext.request.contextPath}/mypage_user/img/profile.png" alt="회원 프로필 사진">
 					<p>${user.full_name}</p>
 				</div>
