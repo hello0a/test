@@ -12,7 +12,7 @@
     </head>
 
     <body>
-        <jsp:include page="include/header.jsp" />
+        	<jsp:include page="/layout/header.jsp" />
 
         <main class="signup-main">
             <div class="wrapper">
@@ -77,7 +77,7 @@
                 });
             });
         </script>
-        <jsp:include page="include/footer.jsp" />
+        	<jsp:include page="/layout/footer.jsp" />
     </body>
 
     </html>

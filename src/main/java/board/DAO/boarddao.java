@@ -7,7 +7,6 @@ import java.sql.*;
 
 public class boarddao {
 
-    // 게시글 전체 조회
     public List<boardDTO> findAll(String designerNoFilter) {
         List<boardDTO> list = new ArrayList<>();
         String sql = "SELECT b.no, b.title, b.content, u.full_name AS writer, d.no AS designerNo, d.shop_name, b.created_at " +
@@ -45,7 +44,6 @@ public class boarddao {
         return list;
     }
 
-    // 단일 게시글 조회
     public boardDTO findByNo(int no) {
         boardDTO dto = null;
         String sql = "SELECT b.no, b.title, b.content, u.full_name AS writer, d.no AS designerNo, d.shop_name, b.created_at " +
@@ -77,7 +75,6 @@ public class boarddao {
         return dto;
     }
 
-    // 게시글 작성
     public boolean insert(boardDTO board) {
         String sql = "INSERT INTO board(title, content, user_no, designer_no, created_at) VALUES(?, ?, ?, ?, NOW())";
         JDBConnection db = new JDBConnection();
@@ -85,7 +82,7 @@ public class boarddao {
             db.psmt = db.con.prepareStatement(sql);
             db.psmt.setString(1, board.getTitle());
             db.psmt.setString(2, board.getContent());
-            db.psmt.setInt(3, 1); // -- > 로그인 한 유저 아이디 받아와야함
+            db.psmt.setInt(3, 1); // -- > 濡쒓렇�씤 �븳 �쑀�� �븘�씠�뵒 諛쏆븘���빞�븿
             db.psmt.setInt(4, board.getDesignerNo());
             int result = db.psmt.executeUpdate();
             return result > 0;
@@ -97,7 +94,6 @@ public class boarddao {
         return false;
     }
 
-    // 게시글 수정
     public boolean update(boardDTO board) {
         String sql = "UPDATE board SET title=?, content=?, designer_no=? WHERE no=?";
         JDBConnection db = new JDBConnection();
@@ -117,7 +113,7 @@ public class boarddao {
         return false;
     }
 
-    // 게시글 삭제
+    // 寃뚯떆湲� �궘�젣
     public boolean delete(int no) {
         String sql = "DELETE FROM board WHERE no=?";
         JDBConnection db = new JDBConnection();
@@ -134,7 +130,7 @@ public class boarddao {
         return false;
     }
 
-    // 드롭다운용 전체 매장 리스트
+    // �뱶濡��떎�슫�슜 �쟾泥� 留ㅼ옣 由ъ뒪�듃
     public List<boardDTO> getShopList() {
         List<boardDTO> shopList = new ArrayList<>();
         String sql = "SELECT no, shop_name FROM designer ORDER BY shop_name ASC";

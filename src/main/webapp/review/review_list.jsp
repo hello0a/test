@@ -12,7 +12,8 @@
     </head>
 
     <body>
-	        <jsp:include page="include/header.jsp" />
+	     	<jsp:include page="/layout/header.jsp" />
+
         <div class="review-list-container">
 
             <!-- 상단 메인 탭 -->
@@ -166,7 +167,7 @@
                 }
             }
         </script>
-        <jsp:include page="include/footer.jsp" />
+  	<jsp:include page="/layout/footer.jsp" />
     </body>
 
     </html>
