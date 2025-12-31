@@ -1,2 +1,3 @@
-2025/12/25-09:20:19.236 78bc Creating DB E:\younga\Git\MSA15_mini2_reload\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Local Storage\leveldb since it was missing.
-2025/12/25-09:20:19.260 78bc Reusing MANIFEST E:\younga\Git\MSA15_mini2_reload\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
+2025/12/25-23:24:36.398 a96c Reusing MANIFEST E:\younga\Git\MSA15_mini2_reload\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Local Storage\leveldb/MANIFEST-000001
+2025/12/25-23:24:36.407 a96c Recovering log #3
+2025/12/25-23:24:36.409 a96c Reusing old log E:\younga\Git\MSA15_mini2_reload\.metadata\.plugins\org.eclipse.swt\EBWebView\Default\Local Storage\leveldb/000003.log 

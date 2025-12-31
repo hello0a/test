@@ -7,6 +7,7 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="E:\younga\eclips-workspace\test"/>
 			<item value="E:\younga\Git\MSA15_mini2_reload"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
